@@ -1,0 +1,8 @@
+4
+6
+10
+NFT\pace\pace1.png
+NFT\hair\hair
+NFT\eyes\eyes
+NFT\mouth\mouth
+g

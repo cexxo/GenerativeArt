@@ -13,4 +13,6 @@ an example path would be: NFT\hair\hair
 let's suppose now we have 6 elements inside the layer hair, we must have in that 
 folder six elements: hair_1, hair_2, hair_3, hair_4, hair_5, hair_6
 pay attentions that the second hair in the path above is about the plain name of our elements in the layer folder.
+The line before the terminator character is the destination path where the NFTs are gonna be saved.
 the last line must be g, it is a terminator symbol. When the program finds that symbol, it stops searching for paths.
+The repository includes some tastecases and generates 100 NFTs that are still not unique.

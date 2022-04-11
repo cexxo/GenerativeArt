@@ -1,9 +1,12 @@
 Results\
 4
-6
-10
+216
 NFT\pace\pace1.png
+1
 NFT\hair\hair
+6
 NFT\eyes\eyes
+6
 NFT\mouth\mouth
+6
 g

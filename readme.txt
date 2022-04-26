@@ -28,12 +28,13 @@ an example path would be: NFT\hair\hair
 let's suppose now we have 6 elements inside the layer hair, we must have in that 
 folder six elements: hair1, hair2, hair3, hair4, hair5, hair6
 pay attentions that the second hair in the path above is about the plain name of our elements in the layer folder.
+the line before the las must be the path where you want to save your new metadata.
 the last line must be g, it is a terminator symbol. When the program finds that symbol, it stops searching for paths.
 The repository includes some tastecases and generates 216 NFTs that are gonna be unique.
 
 In case the number of NFTs required is gonna be more than all the possible combinations, they are gonna be generated only all the possible combination, so that doubles are not gonna be generated.
 
-After the paths.txt has been created, you just have to launch the program with the instrunction "python GenerativeArt1.4.py".
+After the paths.txt has been created, you just have to launch the program with the instrunction "python GenerativeArtpy".
 #################################################################################
 PATHS.TXT EXAMPLE:
 #################################################################################
@@ -48,6 +49,7 @@ NFT\eyes\eyes
 6
 NFT\mouth\mouth
 6
+\metadata
 g
 #################################################################################
 The program also prints a log of all the iterations executed for generating our NFTs. I prints the specific iteration in which the n-th NFT has been generated.

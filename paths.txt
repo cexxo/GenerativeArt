@@ -1,6 +1,6 @@
-Results/
+ERC721/Results/
 5
-5
+3
 Resources/pace/pace1.png
 1
 Resources/hair/hair
@@ -11,6 +11,6 @@ Resources/mouth/mouth
 12
 Resources/ears/ears
 6
-metadata/
+ERC721/metadata/
 g
 

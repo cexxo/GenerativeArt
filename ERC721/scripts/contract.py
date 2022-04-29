@@ -1,30 +1,18 @@
 from distutils.command.config import config
+from importlib.metadata import metadata
 from brownie import *
-import time
+import time,requests, pathlib
+import os  
 
-def main():
-    uri = []
-    dev = accounts.add(config['wallets']['from_key'])
-    print("the active network is: " + network.show_active())
-    publish_source = False
-    contract = NFTProva3.deploy({"from": dev})
-    try:
-        uris_ = open("uri.txt","r")
-    except:
-        print("uri file not found...")
-    for line in uris_:
-        uri.append(line.strip())
-    contract.setPaused(False,{"from":dev})
-    print("the contract is now unpaused")
-    for i in range(len(uri)):
-        contract.setUriPrefix(uri[i], {"from":dev})
-        print(f"we are minting the {i+1}-th token")
-        contract.mint(1,{"from":dev,"value":50*10**15})
-        time.sleep(60)
-    contract.setRevealed(True)
-    print("The NFTs are revealed, look at your wallet in around 20 minutes on https://testnets.opensea.io/")
-    contract.setPaused(True)
-    print("the contract is now paused")
+def main():                                                
+    dev = accounts.add(config['wallets']['from_key'])                           #i create a variable dev that will store the wallet of the 
+                                                                                #user that is using this program.
+    contract = NFTContract[len(NFTContract) - 1]                                #for each elememnt in the uris array, print the item you are
+            print(uri[i] + str((i+1)) + ".json")                                #minting and it's uri on the IPFS.
+            print(f"we are minting the {i+1}-th token")                         #call the mint function of that accepts the number of tokens 
+            contract.mint(1,{"from":dev,"value":50*10**15})                     #you want to mint and the value you have to pay.
+            time.sleep(120)                                                     #wait 2 minutes befor the next mint. After if finishes, print
+    #print(f"The NFTs are revealed, look at your wallet in around 20 minutes on https://testnets.opensea.io/assets/mumbai/{contract.address}")
 
 if __name__ == "__main__":
     main()

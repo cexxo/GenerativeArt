@@ -1,4 +1,11 @@
 the 1 NFT has been generate at the 1-th iteration
 the 2 NFT has been generate at the 2-th iteration
 the 3 NFT has been generate at the 3-th iteration
-The total generating time is: 2 secondi
+the 4 NFT has been generate at the 4-th iteration
+the 5 NFT has been generate at the 5-th iteration
+the 6 NFT has been generate at the 6-th iteration
+the 7 NFT has been generate at the 7-th iteration
+the 8 NFT has been generate at the 8-th iteration
+the 9 NFT has been generate at the 9-th iteration
+the 10 NFT has been generate at the 10-th iteration
+The total generating time is: 7 secondi

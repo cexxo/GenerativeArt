@@ -1,6 +1,6 @@
 ERC721/Results/
 5
-3
+10
 Resources/pace/pace1.png
 1
 Resources/hair/hair

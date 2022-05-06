@@ -23,6 +23,7 @@ contract NFTContract is ERC721, Ownable {
                                                                                                 //or no.
   bool public revealed = false;                                                                 //variable tha tsets the state of the revealing.
 
+  bool private isSet = false;
   constructor() ERC721("Shaman", "SHMN") {                                                      //constructor of our token, it accepts 2 parameters
     setHiddenMetadataUri("");//a name and a symbol.
   }                                                                                             //i set the hidden metadata uri.
@@ -37,7 +38,7 @@ contract NFTContract is ERC721, Ownable {
     return supply.current();                                                                    //supply of minted nft.
   }
                                                                                                 //this function uses the modifier mintCompliance
-  function mint(uint256 _mintAmount) public payable mintCompliance(_mintAmount) {                       //this function allows us to mint an nft.
+  function mint(uint256 _mintAmount) public payable mintCompliance(_mintAmount) {               //this function allows us to mint an nft.
     require(!paused, "The contract is paused!");                                                //we have to specify how many NFTs we want to
     require(msg.value >= cost * _mintAmount, "Insufficient funds!");                            //mint with this transaction. if the contract
                                                                                                 //is on pause, we cannot mint. same if we don't
@@ -141,5 +142,19 @@ contract NFTContract is ERC721, Ownable {
 
   function _baseURI() internal view virtual override returns (string memory) {                  //this function allows the user to get the 
     return uriPrefix;                                                                           //baseURI of our NFTs.
+  }
+
+  function isRevealed() external view returns (bool){                                           //this function returns if the NFTs result
+    return revealed;                                                                            //revealed or not.
+  }
+
+  function isPaused() external view returns (bool){                                             //this function returns if the contract is 
+    return paused;                                                                              //paused or not.
+  }
+
+  function setMaxSupply(uint256 _maxSupply) public onlyOwner {                                  //this function allows us to set the max value
+    require(isSet == false, "The maxSupply has already been settled");                          //of NFT that can be generated with this contract.
+    maxSupply =  _maxSupply;                                                                    //This value can be settled just once and only
+    isSet = true;                                                                               //by tthe owner of this contract.
   }
 }

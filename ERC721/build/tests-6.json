@@ -1,0 +1,11 @@
+{
+  "contracts": {
+    "Address": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "Counters": "1ce946f6a4eaa185320328620ccf999b9e86db7c",
+    "ERC721": "43596085351badb8ab66350553dcdb54ddeec964",
+    "NFTContract": "980f0e19d283829cf90956c4a02ba815d1b177ce",
+    "Strings": "1ce946f6a4eaa185320328620ccf999b9e86db7c"
+  },
+  "tests": {},
+  "tx": {}
+}

@@ -15,3 +15,17 @@ networks:
     vrf_coordinator: '0x8C7382F9D8f56b33781fE506E897a4F1e2d17255'
     link_token: '0x326C977E6efc84E512bB9C30f76E30c160eD06FB'
     keyhash: '0x6e75b569a01ef56d18cab6a8e71e6600d6ce853834d4a5748b720d06f878b3a4'
+
+pytest:
+    # these settings replace the defaults when running pytest
+    gas_limit: 6721975
+    default_contract_owner: true
+    reverting_tx_gas_limit: 6721975
+    revert_traceback: true
+compiler:
+    evm_version: null
+    minify_source: false
+    solc:
+        version: null
+        optimize: true
+        runs: 200
